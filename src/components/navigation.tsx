@@ -17,6 +17,9 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import Coffee from "./coffee/coffee";
+import CoffeeSmall from "./coffee/coffee-small";
+import Logo from "./logo/logo";
 const Links = ["Dashboard", "Projects", "Team"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
@@ -39,7 +42,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("blue.400", "blue.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -49,7 +52,10 @@ export default function Nav() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Logo</Box>
+            <Box>
+              <Logo/>
+              {/*<CoffeeSmall/>*/}
+            </Box>
             <HStack
               as={"nav"}
               spacing={4}
