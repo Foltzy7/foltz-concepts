@@ -44,7 +44,7 @@ const SocialButton = ({
   );
 };
 
-export default function SmallWithLogoLeft() {
+export default function Footer() {
   return (
     <Box
       bg={useColorModeValue("gray.400", "gray.900")}
