@@ -4,7 +4,12 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "@fontsource/source-code-pro";
+
 const theme = extendTheme({
+  fonts: {
+    body: "Source Code Pro",
+  },
   colors: {
     brand: {
       100: "#f7fafc",

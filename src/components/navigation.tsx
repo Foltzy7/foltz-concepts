@@ -1,25 +1,24 @@
 import { ReactNode } from "react";
 import {
-  Box,
-  Flex,
   Avatar,
-  HStack,
-  Link,
-  IconButton,
+  Box,
   Button,
+  Flex,
+  HStack,
+  IconButton,
+  Link,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
   MenuDivider,
-  useDisclosure,
-  useColorModeValue,
+  MenuItem,
+  MenuList,
   Stack,
+  useColorModeValue,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import Coffee from "./coffee/coffee";
-import CoffeeSmall from "./coffee/coffee-small";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import Logo from "./logo/logo";
+
 const Links = ["Dashboard", "Projects", "Team"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
@@ -31,7 +30,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    href={`/${children}`}
   >
     {children}
   </Link>
@@ -53,8 +52,9 @@ export default function Nav() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Logo/>
-              {/*<CoffeeSmall/>*/}
+              <Link href={"/"}>
+                <Logo />
+              </Link>
             </Box>
             <HStack
               as={"nav"}
@@ -84,7 +84,15 @@ export default function Nav() {
                 <MenuItem>Link 1</MenuItem>
                 <MenuItem>Link 2</MenuItem>
                 <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    window.open(
+                      "https://s3.amazonaws.com/www.zachfoltz.com/Zach-Foltz-Resume.pdf"
+                    );
+                  }}
+                >
+                  Resume
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -100,8 +108,6 @@ export default function Nav() {
           </Box>
         ) : null}
       </Box>
-
-      <Box p={4}>Main Content Here</Box>
     </>
   );
 }
