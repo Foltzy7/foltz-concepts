@@ -16,10 +16,10 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 import Logo from "./logo/logo";
 
-const Links = ["Dashboard", "Projects", "About"];
+const Links = ["About"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -81,8 +81,32 @@ export default function Nav() {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    window.open("https://www.distek.com/");
+                  }}
+                >
+                  DISTek Integration&nbsp;
+                  <ExternalLinkIcon />
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    window.open(
+                      "https://www.deere.com/en/our-company/john-deere-careers/work-here/isg/"
+                    );
+                  }}
+                >
+                  John Deere ISG&nbsp;
+                  <ExternalLinkIcon />
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    window.open("https://uni.edu/");
+                  }}
+                >
+                  UNI&nbsp;
+                  <ExternalLinkIcon />
+                </MenuItem>
                 <MenuDivider />
                 <MenuItem
                   onClick={() => {
