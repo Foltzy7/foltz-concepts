@@ -32,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "cypress:open": "cypress open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "start-server-and-test start http://localhost:3000 cy:run",
     "lint": "eslint .",
     "eject": "react-scripts eject"
   },
@@ -62,6 +64,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
     "prettier": "2.5.1",
-    "sass": "^1.45.2"
+    "sass": "^1.45.2",
+    "start-server-and-test": "^1.14.0"
   }
 }
