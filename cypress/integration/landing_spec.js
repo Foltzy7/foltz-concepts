@@ -1,6 +1,6 @@
 describe("Landing page", () => {
   it("should have hero identity text", () => {
-    cy.visit("http://localhost:3000/");
+    cy.visit("https://www.zachfoltz.com/");
     cy.contains("Hero Identity");
   });
 });
