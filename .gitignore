@@ -25,3 +25,5 @@ yarn-error.log*
 /.idea
 /cypress/integration/2-advanced-examples/
 /cypress/integration/1-getting-started/
+/cypress/videos/
+/cypress/screenshots/2-advanced-examples/misc.spec.js/
